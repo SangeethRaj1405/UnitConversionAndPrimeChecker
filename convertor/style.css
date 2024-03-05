@@ -1,0 +1,44 @@
+ 
+ body {
+    background-image: url(bg.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+ }     
+
+ .mainstyle
+        {
+         width: 300px; 
+         height: 200px; 
+         border: 2px solid ; 
+         padding: 10px;
+         margin: auto;
+         margin-top: 200px;
+
+        }
+.convert
+    {
+        background-image: url(bg1.jpg);
+        border: 2px groove;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        filter: grayscale(100%);
+    }        
+
+    .convert:hover
+    {
+        filter: grayscale(0%);
+    }
+           
+.resu
+{
+    border: 2px double rgb(2, 2, 2);
+    margin-top: 50px;
+    max-width: 200px;
+    backdrop-filter: blur(10px);
+    
+  
+}
+
+

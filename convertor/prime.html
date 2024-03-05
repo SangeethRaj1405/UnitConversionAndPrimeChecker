@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime_number</title>
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0; /* Reset default body margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make sure the body takes up the full viewport height */
+        }
+
+        .mainstyle {
+            width: 300px;
+            height: 300px; /* Increased height to accommodate content */
+            border: 2px solid;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .convert {
+            background-image: url(bg1.jpg);
+            border: 2px groove;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            filter: grayscale(100%);
+        }
+
+        .convert:hover {
+            filter: grayscale(0%);
+        }
+
+        .resu {
+            border: 2px double rgb(2, 2, 2);
+            margin-top: 20px; /* Adjusted margin-top */
+            max-width: 200px;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <script>
+        function prime() {
+            let a = document.getElementById('ip').value;
+            let count = 0;
+            a = parseInt(a);
+
+            if (a === 1) {
+                document.getElementById('result').innerText = "IT'S NEITHER PRIME NOR COMPOSITE";
+            }
+
+            for (let i = 2; i < a; i++) {
+                if (a % i == 0) {
+                    count++;
+                }
+            }
+
+            if (count == 0) {
+                document.getElementById('result').innerText = "THE NUMBER IS PRIME";
+            } else {
+                document.getElementById('result').innerText = "THE NUMBER IS NOT PRIME";
+            }
+        }
+    </script>
+</head>
+<body>
+         <center>
+                <div class="mainstyle">
+                    <div class="container text-center convert">
+                        <b><h1 class="text-center" style="font-family: 'Courier New', Courier, monospace">CHECK FOR PRIME</h1></b>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="number" placeholder="Enter a Number to check" id="ip">
+                            </div>
+                            <div class="col-md-6">
+                                <section style="margin: 6px;"><button type="submit" onclick="prime()">CHECK</button></section>
+                            </div>
+                        </div>
+                <div class="resu">
+                    <p id="result"></p>
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
